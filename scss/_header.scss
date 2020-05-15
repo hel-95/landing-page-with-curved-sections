@@ -1,0 +1,67 @@
+.header {
+    background-color: #fff;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: minmax(100px, 1fr) auto;
+        align-content: start;
+        grid-gap: 20px;
+    }
+
+    &__logo {
+
+        img {
+            width: 95px;
+
+            @include breakpoint(small) {
+                width: 130px;
+            }
+
+            @include breakpoint(medium) {
+                width: 155px;
+            }
+
+            @include breakpoint(large) {
+                width: 240px;
+            }
+        }
+        
+        
+    }
+
+    &__link {
+        justify-self: end;
+                
+        a {
+            border: 1px solid $pink;
+            padding: 3px 15px;
+            border-radius: 30px;
+            background-color: transparent;
+            color: $pink;
+            text-decoration: none;
+            font-size: 0.6rem;
+            transition: all .5s ease-in-out;
+
+            @include breakpoint(small) {
+                padding: 5px 22px;
+                font-size: 0.75rem;
+            }
+
+            @include breakpoint(medium) {
+                padding: 6px 26px;
+                font-size: 0.85rem;
+            }
+            
+            @include breakpoint(large) {
+                padding: 8px 32px;
+                font-size: 1rem;
+            }
+        
+            &:hover {
+                background-color: $pink;
+                color: #fff;
+            }
+    }
+
+}
+}

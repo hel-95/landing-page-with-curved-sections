@@ -1,0 +1,88 @@
+.ready {
+    position: relative;
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+    
+    .container--big {
+        padding-top: 230px;
+        padding-bottom: 305px;
+
+        @include breakpoint(medium) {
+            padding-bottom: 210px;
+        }
+        @include breakpoint(large) {
+            padding-top: 320px;
+            padding-left: 100px;
+            padding-bottom: 330px;
+        }
+        
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 40vw;
+        top: 0px;
+        background-image: url(../images/bg-section-bottom-mobile-2.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+        
+        
+        @include breakpoint(medium) {
+            height: 32vw;
+            background-image: url(../images/bg-section-bottom-desktop-2.svg);
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 15vw;
+        bottom: 0px;
+        background-image: url(../images/bg-footer-top-mobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        
+        
+        @include breakpoint(medium) {
+            height: 22vw;
+            background-image: url(../images/bg-footer-top-desktop.svg);
+        }
+    }
+
+    &__header {
+        text-align: center;
+       
+        h1 {
+            
+            @include breakpoint(large) {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    &__button {
+        margin: auto;
+        margin-top: 10px;
+
+        @include breakpoint(medium) {
+            margin-top: 5px;
+        }
+        
+    }
+}

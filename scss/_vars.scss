@@ -1,0 +1,28 @@
+//colors
+$pink: #ff52bf;
+$dark_cyan: #00252e;
+$pale_cyan: #f5faff;
+
+
+//fonts
+$font-headers: "Poppins", sans-serif;
+$font-body: "Open Sans", sans-serif;
+
+
+
+//breakpoints
+    
+
+$breakpoints: (
+     xs: 350px,
+     small: 499px,
+     medium: 699px,
+     large: 999px,
+     xlarge: 1399px
+     );
+@mixin breakpoint($size) {
+$breakpoint-value: map-get($breakpoints, $size);
+    @media screen and (min-width: $breakpoint-value) {
+        @content;
+    }
+}

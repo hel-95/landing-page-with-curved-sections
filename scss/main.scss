@@ -1,0 +1,102 @@
+//Global
+@import "vars";
+@import "container";
+@import "button";
+
+
+//Sections
+@import "header";
+@import "community";
+@import "features";
+@import "about";
+@import "about_conversations";
+@import "ready";
+@import "footer";
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+*, a {
+    color: $dark_cyan;
+}
+
+html, body {
+    height: 100%;
+    font-size: 100%;
+    
+}
+
+body {
+    font-size: calc(1rem + 0.75vw);
+    line-height: 1.3;
+    font-family: $font-body;
+    overflow-x: hidden;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+}
+
+a, p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    @include breakpoint(large) {
+        font-size: 1rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+h1, h2, h3 {
+    font-family: $font-headers;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 1.3em;
+    line-height: 1.5;
+
+    @include breakpoint(large) {
+        font-size: 1.75em;
+    }
+}
+
+h2.small {
+    font-size: 1.1em;
+    margin-bottom: 22px;
+
+    @include breakpoint(medium) {
+        font-size: 1.3em;
+    }
+
+    @include breakpoint(xlarge) {
+        font-size: 1.5em;
+    }
+}
+
+h2.large {
+    font-size: 3em;
+    letter-spacing: 1.2px;
+
+    @include breakpoint(medium) {
+        font-size: 3.4em;
+        letter-spacing: 1.2px;
+    }
+    
+}
+
+p {
+    margin-top: 0;
+       
+}
+
+
+
+
+

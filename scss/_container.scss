@@ -1,0 +1,58 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 25px 24px 90px 24px;
+
+    @include breakpoint(medium) {
+        padding-top: 50px;
+    }
+
+    @include breakpoint(large) {
+        padding: 80px 62px 145px 80px;
+    }
+
+        
+    &--small {
+        @extend .container;
+        max-width: 905px;
+        padding: 55px 24px 125px 15px;
+
+        @include breakpoint(medium) {
+            padding: 40px 24px 125px 15px;
+        }
+
+        @include breakpoint(large) {
+            padding-bottom: 290px;
+            
+        }
+        
+    }
+
+    &--big {
+        @extend .container;
+        padding: 210px 24px 160px 24px;
+
+        @include breakpoint(medium) {
+            padding: 200px 24px 120px 24px;
+        }
+
+        @include breakpoint(large) {
+            padding: 355px 70px 260px 135px;
+            
+        }
+    }
+
+
+    &--about {
+        @extend .container;
+        padding: 80px 24px 30px 24px;
+
+        @include breakpoint(large){
+            padding: 75px 62px 30px 135px;
+        }
+        
+    }
+
+    
+
+}
